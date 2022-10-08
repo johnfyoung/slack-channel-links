@@ -1,0 +1,23 @@
+{
+  "name": "slack-channel-links",
+  "version": "1.0.0",
+  "description": "a slack integration to pull links and files from messages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnfyoung/slack-channel-links.git"
+  },
+  "author": "John Young",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnfyoung/slack-channel-links/issues"
+  },
+  "homepage": "https://github.com/johnfyoung/slack-channel-links#readme",
+  "dependencies": {
+    "@slack/web-api": "^6.7.2",
+    "dotenv": "^16.0.3"
+  }
+}

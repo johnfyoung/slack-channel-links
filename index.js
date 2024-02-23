@@ -20,7 +20,7 @@ const web = new WebClient(token);
 
   if (result.ok) {
     const resourceChannel = result.channels.find(
-      (channel) => channel.name === "04-resources"
+      (channel) => channel.name === process.env.CHANNEL_NAME
     );
 
     if (resourceChannel) {
@@ -81,9 +81,9 @@ const web = new WebClient(token);
 
       fs.writeFileSync(
         "README.md",
-        `# Slack Resources Channel Links (as of ${dateStr})\nThese are links pulled from the class \`04-resources\` channel.  \n\n${links.join(
-          "  \n"
-        )}`
+        `# Slack Resources Channel Links (as of ${dateStr})\nThese are links pulled from the class \`${
+          process.env.CHANNEL_NAME
+        }\` channel.  \n\n${links.join("  \n")}`
       );
     } else {
       console.error("No resources channel");
